@@ -7,8 +7,7 @@ export const Header = () => {
     const {onClose,  user} = useTelegram()
 
   return (
-    <div className={'header'}>
-
+    <div className='header'>
         <Button onClick={onClose}>баттон</Button>
         <span className='username'>{user}lol</span>
     </div>

@@ -31,9 +31,9 @@ export const Form = () => {
   }, [country, face, street, tg])
 
   useEffect(() => {
-    tg.onEvent('mainButtonClicked',onSendData)
+    tg.MainButton.onClick(onSendData)
     return () => {
-        tg.offEvent('mainButtonClicked',onSendData)
+        tg.MainButton.offClick(onSendData)
     }
   }, [onSendData, tg])
 
@@ -53,7 +53,7 @@ export const Form = () => {
   }, [country, street, tg.MainButton])
 
   return (
-    <form className="form">
+    <div className="form">
       <h3>Введите ваши данные</h3>
       <input
         className="input"
@@ -73,6 +73,6 @@ export const Form = () => {
         <option value={"physical"}>Физ. лиц</option>
         <option value={"legal"}>Юр. лицо</option>
       </select>
-    </form>
+    </div>
   );
 };

@@ -28,13 +28,13 @@ export const Form = () => {
         face,
     }
     tg.sendData(JSON.stringify(data))
-  }, [])
+  }, [country, face, street, tg])
   useEffect(() => {
     tg.onEvent('mainButtonClicked',onSendData)
     return () => {
         tg.offEvent('mainButtonClicked',onSendData)
     }
-  }, [])
+  }, [onSendData, tg])
 
   useEffect(() => {
     tg.MainButton.setParams({

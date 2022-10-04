@@ -9,7 +9,7 @@ export const Header = () => {
   return (
     <div className='header'>
         <Button onClick={onClose}>баттон</Button>
-        <span className='username'>{user}lol</span>
+        <span className='username'>{user}</span>
     </div>
   )
 }
